@@ -1,0 +1,366 @@
+.landing-page-bottom {
+    overflow-y: auto; /* Ensure vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+}
+
+.landing-page-top {
+    position : relative;
+    background-image: url('/background.png');
+    background-size: cover; /* or background-size: contain; */
+    background-repeat: no-repeat;
+    width: 100%; /* or any desired width */
+    height: 100%; /* or any desired height */
+}
+
+.landing-page-top header {
+    z-index: 1;
+}
+
+
+.landing-page-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust this value to control the darkness width */
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    pointer-events: none; /* Ensures the gradient doesn't interfere with mouse clicks */
+}
+
+.landing-page-top h1 {
+    position: absolute;
+    top : 70%;
+    left : 50%;
+    transform: translate(-50%, -70%);
+    font-size : clamp(1rem, 4.5vw + 0.30rem, 3rem);
+    text-align: center;
+    text-shadow: 2px 2px red;
+    padding : 15px;
+    filter : drop-shadow(16px 16px 20px red);
+    color: rgb(238, 215, 40);
+    font-family: "Just Another Hand", cursive;
+    font-weight: 900;
+    background-color: rgba(232, 219, 201, 0.5);
+    border: solid 4px transparent; /* Define a solid border with transparency */
+    border-image: linear-gradient(to right, rgb(155, 25, 25), rgb(186, 123, 7)) 1; /* Gradient from red to blue */
+}
+
+.landing-page-top h2 {
+    width : fit-content;
+    font-weight: 800;
+    font-size : clamp(3rem, 4.5vw + 0.30rem, 4rem);
+    font-family: "Just Another Hand", cursive;
+    color : white;
+    text-shadow: 4px 5px 5px #CE5937;
+}
+
+/*-------landing-page-bottom----------*/
+
+.landing-page-bottom {
+    position: relative; /* Required for positioning the overlay */
+    display: grid;
+}
+
+
+.landing-page-bottom::after {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: -20px; /* Align it to the bottom */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it cover the entire width of the container */
+    height: 40px; /* Adjust the height as needed */
+    background: inherit; /* Inherit the background image */
+    filter: blur(10px); /* Apply a blur effect */
+}
+
+/*.landing-page-section {
+    justify-self: center;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}*/
+
+.img-section {
+    aspect-ratio: 1920 / 1440;
+    width : min(95%, 600px);
+}
+
+.part-1, .part-2, .part-3, .part-5 {
+    display: grid;
+    grid-template-columns: minmax(0, 50%) minmax(0, 50%);  /* Allows the columns to shrink but not exceed 50% */
+    grid-template-rows: 50% 50%;
+    height: fit-content;
+    place-items: center;
+}
+
+.part-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto; /* Auto-sized rows based on content */
+    gap: 20px; /* Space between grid items */
+    align-items: center;
+    text-align: center;
+    position: relative; /* Set the positioning context */
+}
+
+.part-4 > div {
+    z-index: 2; /* Ensure these divs are above the background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between items in the flex container */
+}
+
+.part-4 > div:nth-child(3), 
+.part-4 > div:nth-child(4) {
+    flex-direction: row;
+    flex-wrap: wrap; /* Wrap items if space is insufficient */
+}
+
+.part-4 .background-landing-page-section, .sponsors .background-landing-page-section  {
+    grid-column: 1;
+    grid-row: 1 / -1; /* Span from the first to the last row */
+    z-index: 1; /* Lower than the content but above any unspecified layers */
+    width: 100%;
+    height: 100%; /* Cover the full grid area */
+    object-fit: cover; /* Ensure the image covers the area properly */
+    position: absolute; /* Position absolute to lay under the content */
+    top: 0; /* Align top edge with the container */
+    left: 0; /* Align left edge with the container */
+    filter: blur(5px);
+}
+
+/* Individual nested div styles */
+.part-4 div div {
+    width: 100%; /* Adjust width to fit content */
+    max-width: 400px; /* Maximum width of nested divs */
+    margin: auto; /* Center nested divs within their container */
+}
+
+.background-landing-page-section {
+    grid-column: -1 / 1;
+    grid-row : -1 / 1;
+    z-index: -1;
+    aspect-ratio: 4000 / 2284;
+    width : 100%;
+    filter: blur(5px);
+}
+
+.part-1 > div, .part-2 > div, .part-3 > div, .part-5 > div {
+    grid-column: 1 / 2;
+    grid-row : -1 / 1;
+    margin: 0 15px;
+}
+
+.part-5 > div {
+    align-self: center;
+}
+
+.part-5 > div > div {
+    margin-bottom: 10px;
+}
+
+.part-1 .img-section, .part-2 .img-section, .part-3 .img-section {
+    grid-column: 2 / 3;
+    grid-row: -1 / 1;
+}
+
+.part-3 > div {
+    grid-template-columns: 55% 45%;
+    padding : 20px;
+}
+
+
+
+.landing-page-section h2{
+    font-size : clamp(1rem, 3vw + 0.10rem, 3rem);
+    font-weight : 600;
+    max-width: 20ch;
+    text-shadow: 2px 2px 9px #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.landing-page-section p, .landing-page-section h3 {
+    font-weight: 400;
+    text-shadow: 2px 2px 4px #FFFFFF;
+    max-width: 50ch;
+    padding : 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+.explore, .signup {
+    /* Basic styling */
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    margin: 0.5em;
+    font-size: clamp(0.7rem, 4.5vw + 0.30rem, 1rem);
+    font-weight: 400;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px #FFFFFF;
+    transition: all 0.2s ease-in;
+}
+
+.explore:hover {
+    background-color: white;
+    color : black;
+}
+
+.signup:hover {
+    background-color: #fff;
+    color : black;
+}
+  /* Explore button styling */
+.explore {
+    background-color: #0b0d21; /* Light blue */
+    color: #fff; /* White text */
+  }
+  
+  /* Sign up button styling */
+.signup {
+    background-color: transparent;
+    color: #ffffff; /* Light blue text */
+    border: 1px solid #ffffff; /* Light blue border */
+}
+
+.part-3 > div > div {
+    display: flex;
+    gap : 20px;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.part-3 h3 {
+    color : white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/*-------part-4--------*/
+
+
+/*-------part-5--------*/
+
+.part-5 {
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+}
+
+
+.part-5 input {
+    width : min(100%, 350px);
+    height: 40px;
+    text-indent: 10px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border : none;
+    font-family: "Barlow", sans-serif;
+}
+
+@media (max-width : 890px) {
+    .part-3 .img-section {
+        display: none;
+    }
+
+    .part-3 > div {
+        grid-column: -1 / 1;
+        display: flex;
+        padding : 0;
+        gap : 5px;
+        align-items: center;
+    }
+
+    .part-3 > div > div {
+        flex-direction: column;
+        margin-right: 0;
+    }
+    .part-3 > div > div svg {
+        display: none;
+    }
+
+    .part-4 > div > div img {
+        margin : 0;
+    }
+
+    .part-4 > div > div h3 {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width : 670px) {
+    .part-5 {
+        text-align: center;
+    }
+    .part-5 > div {
+        grid-column: -1 / 1;
+    }
+
+    .part-5 input {
+        font-size: 1rem;
+    }
+
+    .part-5 > div > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .part-5 > div p:last-child {
+        display: none;
+    }
+
+    .part-5 h2 {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width : 553px) {
+    .landing-page-bottom {
+        text-align: center;
+    }
+    .img-section {
+        display: none;
+    }
+
+    .part-1 > div, .part-2 > div {
+        grid-column: -1 / 1;
+    }
+
+    .landing-page-section h2 {
+        max-width: 100%;
+    }
+
+    .part-2 > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part-3 h3 {
+        display: none;
+    }
+
+    .part-3 {
+        font-size : clamp(0.5rem, 1.5vw + 0.30rem, 2rem);
+    }
+}
+
+@media (max-width : 426px) {
+    .part-2 > div p {
+        display: none;
+    }
+}
+
+
+

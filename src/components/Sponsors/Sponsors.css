@@ -1,0 +1,41 @@
+.react-multi-carousel-item.carousel-item-padding-40-px {
+    height : fit-content;
+}
+
+.react-multi-carousel-track {
+    height : 555px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    left : 230px;
+}
+
+.sponsors h2 {
+    font-size : clamp(1rem, 4.5vw + 0.30rem, 3rem);
+    font-weight : 600;
+    width: fit-content;
+    margin: 15px;
+    text-shadow: 2px 2px 9px #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+.react-multiple-carousel__arrow{
+    top : 50%;
+    transform: translate(0, -50%);
+}
+
+.react-multi-carousel-dot-list.custom-dot-list-style {
+    left : 50%;
+}
+
+.sponsors {
+    background-image: 
+    linear-gradient(
+      213deg in oklab,
+      oklch(12% 0.17 268) -4% -4%, oklch(0% 0.24 90) 111% 111%
+    )
+  ;
+}

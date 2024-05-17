@@ -1,0 +1,58 @@
+.background-photos {
+    position: fixed;
+    z-index: -1;
+    top : 0;
+    left : 0;
+    height : 100vh;
+    width : 100vw;
+    filter : blur(5px)
+}
+
+.photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap : 15px;
+    margin: 0 auto;
+    justify-content: center;
+    padding : 20px;
+}
+
+.photos-container img {
+    max-height: 400px;
+    width : auto;
+}
+
+.photos-page h2 {
+    font-size : clamp(1rem, 4.5vw + 0.30rem, 3rem);
+    font-weight : 600;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 9px #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.photo-item {
+    position: relative;
+}
+
+.photo-item .delete-btn {
+    position: absolute;
+    top: 10px; /* Positioning the button near the top-right corner */
+    right: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* Button is invisible initially */
+    transition: opacity 0.5s ease; /* Smooth transition for the button appearance */
+    display: none; /* Ensures button does not occupy space when not shown */
+}
+
+.photo-item:hover .delete-btn {
+    opacity: 1; /* Button becomes visible on hover */
+    display: block; /* Allow the button to occupy space when needed */
+}

@@ -1,0 +1,90 @@
+
+.background-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    opacity: 0.8; /* Adjust background opacity so it doesn't overpower content */
+    background-size: cover;
+    background-position: center;
+    top : 0;
+}
+
+
+.sponsor-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sponsor-section h2 {
+    font-size : clamp(1rem, 4.5vw + 0.30rem, 3rem);
+    color: #ffffff;
+    text-shadow: #ffffff 1px 1px 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width : fit-content;
+    padding : 10px;
+    margin : 0 auto 30px auto;
+    border-radius: 5px;
+}
+
+.sponsor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor-image {
+    position: relative;
+    max-width: 400px;
+    cursor: pointer;
+    height: auto;
+    z-index: 1;
+    border-radius: 10px;
+    transition: transform 0.2s; /* Smooth transform effect on hover */
+}
+
+.sponsor-image:hover {
+    transform: scale(1.05);
+}
+
+.sponsor-image img {
+    width : 100%;
+    height : 100%;
+}
+
+.sponsor-container:hover::after {
+    color : rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.8);
+    text-shadow: #ffffff 1px 1px 1px;
+    font-size: 2rem;
+    position: absolute;
+    left : 10px;
+    top : 10px;
+    padding : 5px;
+    border-radius: 5px;
+}
+
+.main .sponsor-image:hover::after {
+    content : "Sponsor Principal";
+}
+
+.secondary .sponsor-image:hover::after {
+    content : "Sponsor Secondaire";
+}
+
+.main .sponsor-image {
+    border: 3px solid rgb(0, 0, 0); /* Highlight main sponsors */
+}
+
+.secondary .sponsor-image {
+    border: 2px solid silver; /* Distinguish secondary sponsors */
+}
+
+
+
+@media (max-width: 768px) {
+    .sponsor-image {
+        width: 90%;
+    }
+}

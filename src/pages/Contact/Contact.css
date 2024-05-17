@@ -1,0 +1,81 @@
+.background-contact {
+    width : 100vw;
+    height : 100vh;
+    z-index: -1;
+    position: fixed;
+    filter: blur(5px);
+}
+
+.contact-container > h1 {
+    text-align: center;
+    font-size : clamp(1rem, 3vw + 0.10rem, 3rem);
+    font-weight : 600;
+    text-shadow: 2px 2px 9px #000000;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color : white
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    color : white;
+    font-weight: 100;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: rgba(201, 121, 121, 0.6);
+    margin: 50px 0;
+    padding : 50px;
+    gap : 15px;
+}
+
+.contact-info > div {
+    width: fit-content;
+}
+
+.contact-info h2 {
+    font-weight: 100;
+}
+
+.contact-info a {
+    all : unset;
+    display: block;
+    width : 100%;
+    cursor: pointer;
+}
+
+.icon-contact {
+    stroke: white;
+    size: 20px;
+    padding : 20px;
+    box-sizing: content-box;
+    background-color: rgb(158, 19, 19);
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-contact:hover {
+    scale : 1.1;
+    background-color: red;
+}
+
+.map-container {
+    width : 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.map-container iframe {
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
+}
+
+@media (max-width : 800px) {
+    .contact-info {
+        justify-content: center;
+    }
+}

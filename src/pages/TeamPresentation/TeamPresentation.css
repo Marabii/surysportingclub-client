@@ -1,0 +1,104 @@
+.team-page-background {
+    position: fixed;
+    width : 100vw;
+    height : 100vh;
+    z-index: -1;
+}
+
+.team-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+}
+  
+  .team-photo {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+    padding: 0 15px;
+  }
+  
+  .team-content {
+    padding: 20px;
+  }
+  
+  .team-name {
+    font-size: 2.5rem;
+    color: #ff6e7f;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+    background-color: #f2f2f2;
+    padding : 10px;
+    border-radius: 10px;
+  }
+  
+.team-role, .team-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color : black;
+    text-shadow: white 1px 1px 1px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding : 5px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.team-role strong, .team-info p strong {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color : #ff6e7f
+}
+
+  
+  .coach-message {
+    font-style: italic;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #ff6e7f;
+    margin-bottom: 50px;
+  }
+  
+  .social-media {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .social-link {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .social-link:hover {
+    color: #ff6e7f;
+  }
+  
+  .team-footer {
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  
+  /* Include this if you're using FontAwesome for social media icons */
+  .fab {
+    margin-right: 8px;
+  }
+
+.delete-button-team {
+  background-color: red;
+  padding : 10px 15px;
+  color : white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button-team:hover {
+  background-color: rgb(184, 1, 1);
+}
+  

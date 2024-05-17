@@ -1,0 +1,417 @@
+/* Admin.css */
+
+.admin-panel-container .background-admin {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(5px) brightness(0.8);
+}
+
+.admin-panel-container .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Adjusted as per Header's height */
+}
+
+.admin-panel-container .latest-news-section,
+.admin-panel-container .landing-page-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    display: grid;
+}
+
+.admin-panel-container h2 {
+    color: #d35400 !important; /* Fiery color to match the theme */
+    text-align: center;
+    margin-bottom: 20px;
+    justify-self: center;
+}
+
+.admin-panel-container .news-form,
+.admin-panel-container .landing-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel-container .news-title,
+.admin-panel-container .news-description,
+.admin-panel-container .landing-image {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.admin-panel-container .news-description {
+    height: 100px;
+    resize: vertical;
+}
+
+.admin-panel-container .submit-news,
+.admin-panel-container .update-image {
+    background: #e67e22; /* Fiery button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.admin-panel-container .submit-news:hover,
+.admin-panel-container .update-image:hover {
+    background: #d35400;
+}
+
+/* Admin.css */
+
+.admin-panel-container .message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+
+.message-success {
+    background-color: #4CAF50; /* Green background for success messages */
+}
+
+.message-error {
+    background-color: #f44336; /* Red background for error messages */
+}
+
+/* Specific styles for the club and sponsor image sections */
+.club-images-section,
+.sponsor-images-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 600px;
+    display: grid;
+}
+
+.club-images-section h2,
+.sponsor-images-section h2 {
+    color: #3498db; /* Soothing blue for headers */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.club-image,
+.sponsor-image-input {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.submit-club-image,
+.submit-sponsor-image {
+    background: #e67e22; /* Green button color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.submit-club-image:hover,
+.submit-sponsor-image-input:hover {
+    background: #e67e22; /* Darker green on hover */
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+}
+
+.admin-panel-container .matches-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    display: grid;
+}
+
+.admin-panel-container .match-time, .admin-panel-container .match-teams {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: normal;
+    color : black;
+
+}
+
+.admin-panel-container .submit-match {
+    background:#e67e22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.admin-panel-container .match-form input {
+    width : 50%;
+}
+
+.add-team-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width : 80%;
+    max-width: 600px;
+}
+
+.add-team-section h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.team-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-form input,
+.team-form select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.team-form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.team-form button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.team-form button:hover {
+    background-color: #d06b12;
+}
+
+.role-manager {
+    margin: 20px;
+}
+
+.role-manager  .input-container {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-description {
+    resize: none;
+}
+
+.role-manager .input-field {
+    margin-bottom: 0;
+    margin-right: 5px;
+    width : 100%;
+}
+
+.add-button {
+    cursor: pointer;
+    width : 100%;
+}
+
+.role-list {
+    all : unset;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.role-item {
+    margin-bottom: 5px;
+}
+
+.nav-bar-admin {
+    width : 100%;
+    padding : 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color : black;
+    display: flex;
+    justify-content: center;
+    gap : 20px;
+}
+
+.nav-bar-admin button {
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    all: unset;
+    background-color: transparent;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    gap : 5px;
+}
+
+.nav-bar-admin button:hover {
+    background-color: rgb(255, 255, 255);
+    color : black;
+}
+
+.email-admin {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+.email-admin h1 {
+    text-align: center;
+}
+
+.email-admin form {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-admin label {
+    margin-top: 10px;
+}
+
+.email-admin input[type="text"],
+.email-admin select,
+.email-admin textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.email-admin button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-admin button:hover {
+    background-color: #0056b3;
+}
+
+
+.quill {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 180px;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="24px"]::before {
+    content: 'Normal';
+    font-size: 18px !important;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="32px"]::before {
+    content: 'Large';
+    font-size: 25px !important;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="40px"]::before {
+    content: 'Huge';
+    font-size: 30px !important;
+}
+
+.ql-picker-label[data-value="24px"]::before {
+    content : "Normal" !important;
+}
+
+.ql-picker-label[data-value="32px"]::before {
+    content : "Large" !important;
+}
+
+
+.ql-picker-label[data-value="40px"]::before {
+    content : "Huge" !important;
+}
+
+.ql-editor li {
+    list-style-type: decimal;
+}
+
+.ql-container {
+    font-size: inherit;
+}
+
+.latest-news-section {
+    box-sizing: border-box;
+}
+
+.specific-email-input + button {
+    margin-bottom: 30px;
+}
+
+.news-form {
+    width : 100%;
+}
+
+.news-form textarea {
+    width: 100%;
+}
+
+
+
+  
+  
+
+
+
+
+
+

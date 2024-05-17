@@ -1,0 +1,82 @@
+.background-week-end-program{
+    position: fixed;
+    z-index: -1;
+    width : 100vw;
+    height : 100vh;
+    filter: blur(5px) brightness(0.8);
+}
+
+.programme-du-week-end-container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+}
+
+.programme-content {
+    place-self: center;
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.programme-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match {
+    background: #f7f7f7;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-time {
+    font-weight: bold;
+    color: #2a7a1c;
+}
+
+.match-teams {
+    color: #555;
+}
+
+.no-matches {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.delete-button-matches {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0; /* No rounded corners for a sharp, modern look */
+    transition: background-color 0.3s ease;
+}
+
+.delete-button-matches:hover {
+    background-color: #cc0000;
+}
+
+
+
