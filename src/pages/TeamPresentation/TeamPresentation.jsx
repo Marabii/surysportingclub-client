@@ -54,7 +54,7 @@ export default function TeamPresentation() {
   };
 
   const imgVar = teamDetails.name.split(" ").join("_");
-  const imageSRC = `${imgVar}.png`;
+  const imageSRC = `${imgVar.toLowerCase()}.png`;
 
   return (
     <div className="team-page">
