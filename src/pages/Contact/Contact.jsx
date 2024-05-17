@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import Header from "../../components/Header/Header";
-import { Phone, Mail, Locate, Facebook } from "lucide-react";
+import { Phone, Mail, Locate } from "lucide-react";
 
 import background from "/background10.png";
 
@@ -37,7 +37,12 @@ export default function Contact() {
 
         <div>
           <a href="https://www.facebook.com/profile.php?id=100057662790427">
-            <Facebook className="icon-contact" />
+            <img
+              src="/facebook.svg"
+              alt="facebook"
+              className="icon-contact"
+              style={{ color: "white" }}
+            />
             <h2>Suivez-nous sur Facebook!</h2>
           </a>
         </div>
