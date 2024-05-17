@@ -15,6 +15,7 @@
     "dotenv": "^16.4.5",
     "framer-motion": "^11.0.25",
     "git": "^0.1.5",
+    "lucide-react": "^0.378.0",
     "quill": "^2.0.0",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
