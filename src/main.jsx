@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 
-if (import.meta.env.VITE_REACT_APP_NODE_ENV !== "production")
+if (import.meta.env.VITE_REACT_APP_NODE_ENV !== "development")
   disableReactDevTools();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
