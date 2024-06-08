@@ -81,11 +81,11 @@ export default function LatestNews() {
 
   return (
     <div className="latest-news-section">
-      <h2>Add Latest News</h2>
+      <h2>Ajouter les dernieres nouvelles</h2>
       <form className="news-form" onSubmit={handleNewsSubmit}>
         <input
           type="text"
-          placeholder="Title"
+          placeholder="Titre"
           className="news-title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -133,7 +133,7 @@ export default function LatestNews() {
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
         <button type="submit" className="submit-news">
-          Add News
+          Ajouter la nouvelle
         </button>
         {uploadProgress > 0 && (
           <div style={{ width: "100%", backgroundColor: "#ddd" }}>

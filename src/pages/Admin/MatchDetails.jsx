@@ -56,11 +56,11 @@ export default function MatchDetails() {
 
   return (
     <div className="matches-section">
-      <h2>Add Match Details</h2>
+      <h2>Ajouter les détails des matchs</h2>
       <form className="match-form" onSubmit={handleMatchSubmit}>
         <input
           type="text"
-          placeholder="Time (e.g., 10:00 AM)"
+          placeholder="Heure (e.g., 10:00 AM)"
           className="match-time"
           value={matchTime}
           onChange={(e) => setMatchTime(e.target.value)}
@@ -68,14 +68,14 @@ export default function MatchDetails() {
         />
         <input
           type="text"
-          placeholder="Teams (e.g., Team A vs Team B)"
+          placeholder="Equipes (e.g., Equipe A vs Equipe B)"
           className="match-teams"
           value={matchTeams}
           onChange={(e) => setMatchTeams(e.target.value)}
           required
         />
         <button type="submit" className="submit-match">
-          Add Match
+          Ajouter le match
         </button>
       </form>
     </div>
